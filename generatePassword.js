@@ -23,9 +23,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return password;
     };
 
+const copyToClipboard = (password) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
     generateButton.addEventListener('click', () => {
         const newPassword = generatePassword();
 
-        console.log('new pass', newPassword);
+        newPasswordSpan.innerHTML = newPassword;
+    });
+
+
+    copyButton.addEventListener('click', () => {
+        const newPassword = newPasswordSpan.innerHTML;
+
+        copyToClipboard(newPassword);
     });
 });

@@ -42,21 +42,16 @@ input {
     text-align: center;
 }
 
-#buttonWrapper {
-    text-align: center;
-    width: 100%;
-}
-
 button {
+    background-color: #f4f4f4;
 	border: 1px solid #000;
-	border-radius: 10%;
-	padding: 8px;
+	padding: 10px;
 	text-align: center;
-	width: 50%;
+	width: 10rem;
 }
 
 button:hover {
-	background-color: #f0f0f0;
-	padding: 10px;
-	cursor: pointer;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    cursor: pointer;
 }

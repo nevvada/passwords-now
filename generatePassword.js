@@ -11,7 +11,7 @@ const generatePassword = () => {
     let password = '';
 
     for (let i = 0; i < Number(length); i++) {
-        const randomCharIndex = Math.round(Math.random() * passwordChars.length);
+        const randomCharIndex = Math.floor(Math.random() * passwordChars.length);
         const randomChar = passwordChars[randomCharIndex];
 
         password += randomChar;

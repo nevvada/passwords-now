@@ -39,7 +39,7 @@
 
         <section>
             <h3>special characters?</h3>
-            <select name="specialCharacters" id="specialCharactersSelect">
+            <select name="specialChars" id="specialCharsSelect">
                 <option value="yes">yes</option>
                 <option value="no">no</option>
             </select>
@@ -51,13 +51,15 @@
 
         <section>
             <h3>new password:</h3>
-            <div id="newPassword"></span>
+            <div id="password"></div>
         </section>
 
-        <section>
+        <section id="copySection">
             <button id="copyButton">copy</button>
+            <div id="copiedTooltip">copied!</div>
         </section>
 
+        <script src="copyToClipboard.js"></script>
         <script src="generatePassword.js"></script>
     </body>
 </html>

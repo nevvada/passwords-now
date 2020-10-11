@@ -1,17 +1,13 @@
-const CHARACTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-const SPECIAL_CHARACTERS = '!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~';
-
-const generateButton = document.querySelector('#generateButton');
-const newPasswordSpan = document.querySelector('#newPassword');
-const copyButton = document.querySelector('#copyButton');
+const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const SPECIAL_CHARS = '!"#$%&\'()*+,-./:;<=>?@[]^_`{|}~';
 
 const generatePassword = () => {
-    const lengthDOM = document.querySelector('#lengthSelect');
-    const length = lengthDOM.options[lengthDOM.selectedIndex].text;
-    const specialCharsDOM = document.querySelector('#specialCharactersSelect');
-    const hasSpecialChars = specialCharsDOM.options[specialCharsDOM.selectedIndex].text;
+    const lengthSelect = document.querySelector('#lengthSelect');
+    const length = lengthSelect.options[lengthSelect.selectedIndex].text;
+    const specialCharsSelect = document.querySelector('#specialCharsSelect');
+    const hasSpecialChars = specialCharsSelect.options[specialCharsSelect.selectedIndex].text;
 
-    const passwordChars = hasSpecialChars ? CHARACTERS + SPECIAL_CHARACTERS : CHARACTERS;
+    const passwordChars = hasSpecialChars ? CHARS + SPECIAL_CHARS : CHARS;
     let password = '';
 
     for (let i = 0; i < Number(length); i++) {
@@ -24,27 +20,13 @@ const generatePassword = () => {
     return password;
 };
 
-const copyToClipboard = (password) => {
-    const textarea = document.createElement('textarea');
-    textarea.value = password;
-    document.body.appendChild(textarea);
-    textarea.select();
-
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-}
+const generateButton = document.querySelector('#generateButton');
+const passwordSpan = document.querySelector('#password');
 
 document.addEventListener('DOMContentLoaded', () => {
     generateButton.addEventListener('click', () => {
-        const newPassword = generatePassword();
+        const password = generatePassword();
 
-        newPasswordSpan.innerHTML = newPassword;
-    });
-
-
-    copyButton.addEventListener('click', () => {
-        const newPassword = newPasswordSpan.innerHTML;
-
-        copyToClipboard(newPassword);
+        passwordSpan.innerHTML = password;
     });
 });

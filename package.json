@@ -1,6 +1,6 @@
 {
   "name": "passwords-now",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Password generator chrome extension, to save you the hassle of finding generator sites",
   "main": "generatePassword.js",
   "repository": {

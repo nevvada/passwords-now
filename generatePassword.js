@@ -7,7 +7,9 @@ const generatePassword = () => {
     const specialCharsSelect = document.querySelector('#specialCharsSelect');
     const hasSpecialChars = specialCharsSelect.options[specialCharsSelect.selectedIndex].text;
 
-    const passwordChars = hasSpecialChars ? CHARS + SPECIAL_CHARS : CHARS;
+    const passwordChars = hasSpecialChars === 'yes'
+        ? CHARS + SPECIAL_CHARS
+        : CHARS;
     let password = '';
 
     for (let i = 0; i < Number(length); i++) {
@@ -17,7 +19,7 @@ const generatePassword = () => {
         password += randomChar;
     }
 
-    return password;
+    return password.replace(/</g, '&lt;');
 };
 
 const generateButton = document.querySelector('#generateButton');

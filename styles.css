@@ -1,50 +1,57 @@
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 input,
 label,
 select,
-button,
-textarea
-{
-	background:none;
-	border:0;
-	display:inline-block;
-	line-height:1;
-	margin:0;
-	padding:0;
-	vertical-align:middle;
-	white-space:normal;
-
+textarea {
+    background: none;
+    border: 0;
+    display: inline-block;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    white-space: normal;
 }
 
 body {
-	background-color: #fff;
-	color: #000;
-	display: flex;
-	flex-direction: column;
-	height: 500px;
-	align-items: center;
-	width: 300px;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    align-items: center;
+    width: 300px;
 }
 
 h1 {
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+section {
+    margin: 0.75rem;
 	text-align: center;
 }
 
 input {
-	border-bottom: solid black 1px;
-	text-align: center;
-}
-
-#buttonWrapper {
-	text-align: center;
-	width: 100%;
+    border-bottom: solid #000 1px;
+    text-align: center;
 }
 
 button {
-	width: 5rem;
+    background-color: #f4f4f4;
+	border: 1px solid #000;
+	padding: 10px;
+	text-align: center;
+	width: 10rem;
+}
+
+button:hover {
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    cursor: pointer;
 }

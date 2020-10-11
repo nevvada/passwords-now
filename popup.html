@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<style>
-		button {
-			height: 30px;
-			width: 30px;
-			outline: none;
-		}
-	</style>
-</head>
-<body>
-	<h1>Passwords Now</h1>
+    <head>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>Passwords Now</h1>
 
-	<h3>length?</h3>
-	<select name="length" id="length">
-		<optgroup label="weak">
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>	
-		</optgroup>
+        <section>
+            <h3>length?</h3>
+            <select name="length" id="lengthSelect">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option selected value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+        </section>
 
-		<optgroup label="noice">
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-			<option value="16">16</option>
-			<option value="17">17</option>
-			<option value="18">18</option>
-			<option value="19">19</option>
-			<option value="20">20</option>
-			<option value="21">21</option>
-			<option value="22">22</option>
-			<option value="23">23</option>
-			<option value="24">24</option>
-			<option value="25">25</option>
-			<option value="26">26</option>
-			<option value="27">27</option>
-			<option value="28">28</option>
-			<option value="29">29</option>
-			<option value="30">30</option>
-	
-		</optgroup>
-	</select>
+        <section>
+            <h3>special characters?</h3>
+            <select name="specialCharacters" id="specialCharactersSelect">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        </section>
 
-	<h3>special characters?</h3>
-	<select name="specialCharacters" id="specialCharacters">
-		<option value="yes">yes</option>
-		<option value="no">no</option>
-	</select>
+        <section>
+            <button id="generateButton">generate</button>
+        </section>
 
-	<div id="buttonWrapper">
-		<button>Generate</button>
-	</div>
+        <section>
+            <h3>new password:</h3>
+            <div id="newPassword"></span>
+        </section>
 
-	<h3>new password:</h3>
-	<span id="newPassword"></span>
+        <section>
+            <button id="copyButton">copy</button>
+        </section>
 
-	<link rel="stylesheet" href="styles.css" >
-</body>
+        <script src="generatePassword.js"></script>
+    </body>
 </html>
